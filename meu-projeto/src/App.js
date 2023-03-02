@@ -1,25 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld'
+import SayMyName from './components/SayMyName'
+import Pessoa from './components/Pessoa';
 
 function App() {
 
-  const name = 'DESENVOLVEDORES'
-  const newname = name.toUpperCase()
-
-  function sum(a, b){
-    return a + b 
-  }
-
-  const url = 'https://via.placeholder.com/150'
+  const name = 'Maria'
 
   return (
     <div className="App">
-      <h1>DENO COMMUNITY</h1>
-      <p>Ola, {newname}</p>
-      <p>Somos: {sum(1,2)}</p>
-      <img src={url} alt="Minha Imagem" />
-      <HelloWorld></HelloWorld>
+      <SayMyName nome="Marcos" />
+      <SayMyName nome="Chameison" />
+      <SayMyName nome={name} />
+      <Pessoa nome="Marcos" Idade="26" profissao="Programador" foto="https.//via.placeholder.com/150"/>
     </div>
   );
 }
